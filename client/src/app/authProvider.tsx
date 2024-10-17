@@ -44,19 +44,22 @@ const formFields = {
 
 const AuthProvider = ({ children }: any) => {
   return (
-    <div>
-      <Authenticator formFields={formFields}>
-        {({ user }: any) =>
-          user ? (
-            <div>{children}</div>
-          ) : (
-            <div>
-              <h1>Please sign in below:</h1>
-            </div>
-          )
-        }
-      </Authenticator>
-    </div>
+    <Authenticator formFields={formFields}>
+      {({ user }: any) =>
+        user ? (
+          // When user is logged in, don't apply the flexbox layout
+          <div>{children}</div>
+        ) : (
+          // Use Tailwind CSS to center the login form
+          <div className="flex flex-col items-center justify-center min-h-screen text-center">
+            <h1 className="mb-4 text-2xl font-bold">TaskBridge</h1>
+            <p className="mb-6 text-lg">
+              Please sign in or create an account to view the application
+            </p>
+          </div>
+        )
+      }
+    </Authenticator>
   );
 };
 
