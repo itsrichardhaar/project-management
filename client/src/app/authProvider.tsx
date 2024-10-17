@@ -55,10 +55,10 @@ const AuthProvider = ({ children }: any) => {
       }}
     >
       <div>
-        <h1 style={{ marginBottom: "16px" }}>TaskBridge</h1>
-        <p style={{ marginBottom: "24px" }}>
+        <div className="mb-16 text-xl font-bold text-gray-800">TaskBridge</div>
+        <div className="mb-24 text-sm text-gray-800">
           Please sign in or create an account to view the application
-        </p>
+        </div>
       </div>
       <Authenticator formFields={formFields}>
         {({ user }: any) =>
