@@ -55,8 +55,9 @@ const AuthProvider = ({ children }: any) => {
       }}
     >
       <div>
-        <div className="mb-16 text-xl font-bold text-gray-800">TaskBridge</div>
-        <div className="mb-24 text-sm text-gray-800">
+        <div className="mb-6 text-xl font-bold text-gray-800">Welcome to TaskBridge</div>
+        <div className="mb-12 text-md font-bold text-gray-600">Streamline your project management</div>
+        <div className="mb-6 text-sm text-gray-800">
           Please sign in or create an account to view the application
         </div>
       </div>
