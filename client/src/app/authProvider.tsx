@@ -44,14 +44,29 @@ const formFields = {
 
 const AuthProvider = ({ children }: any) => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        textAlign: "center",
+      }}
+    >
+      <div>
+        <h1 style={{ marginBottom: "16px" }}>TaskBridge</h1>
+        <p style={{ marginBottom: "24px" }}>
+          Please sign in or create an account to view the application
+        </p>
+      </div>
       <Authenticator formFields={formFields}>
         {({ user }: any) =>
           user ? (
             <div>{children}</div>
           ) : (
             <div>
-              <h1>Please sign in below:</h1>
+              <h2>Please sign in below:</h2>
             </div>
           )
         }
