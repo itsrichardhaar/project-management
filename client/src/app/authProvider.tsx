@@ -44,30 +44,14 @@ const formFields = {
 
 const AuthProvider = ({ children }: any) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        textAlign: "center",
-      }}
-    >
-      <div>
-        <div className="mb-4 text-2xl font-bold text-gray-800">Welcome to TaskBridge</div>
-        <div className="mb-12 text-lg font-bold text-gray-600">Streamline your project management</div>
-        <div className="mb-6 text-sm text-gray-800">
-          Please sign in or create an account to view the application
-        </div>
-      </div>
+    <div>
       <Authenticator formFields={formFields}>
         {({ user }: any) =>
           user ? (
             <div>{children}</div>
           ) : (
             <div>
-              <h2>Please sign in below:</h2>
+              <h1>Please sign in below:</h1>
             </div>
           )
         }
